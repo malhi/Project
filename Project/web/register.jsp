@@ -40,31 +40,24 @@
 	</div>
         <div><br>
             <center><h2>Register Here</h2> </center>
-            <center> <form  id="register_form" class="cmxform">
-               
-                    <tr>
-                        <td> <label for="firstName"><b>Name:</b>
-                <input id="name" name="name"></label></td>
-                    </tr>
-                     <br><br>
-                    <tr>
-                        <td> <label for="firstName"><b>Email:</b>
-                <input id="email" name="email"></label></td>
-                    </tr><br><br>
-                    <tr>
-                        <td><label for="firstName"><b>Password:</b>
-                <input id="password" name="password"></label></td>
-                </tr><br><br>
-                    <tr>
-                        <td> <label for="firstName"><b>Age:</b>
-                <input id="age" name="age"></label></td>
-                    </tr><br><br>
-                    <tr>
-                        <td><button id="register" type="submit"><b>Register</b</button></td>
-                    </tr>
-               </table></center>
-
-</form> </center> 
+            <center> <form action="signup" method="post">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" style="margin-left: 50px"><br/><br/>
+                <label for="lname">Last name:</label>
+                <input type="text" name="lname" style="margin-left: 55px"><br><br/>
+                <label for="username">Username:</label>
+                <input type="text" name="username" style="margin-left: 55px"><br><br/>
+                <label for="password">Password:</label>
+                <input type="password" name="password" style="margin-left: 60px"><br><br/>
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" name="cpassword" ><br><br/>
+                <label for="email">Email Id:</label>     
+                <input type="email" name="email" style="margin-left: 70px"><br><br/>
+                <label for="phone">Phone :</label>
+                 <input type="tel" name="phone" style="margin-left: 80px"><br><br/>    
+                     
+                <input type="submit" value="Submit" id="submit">        
+                </form><br/><br/><br/> </cenetr>
             </div>  
         <br>
 	<div id="footer" align="center">
