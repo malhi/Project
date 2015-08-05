@@ -26,7 +26,7 @@ public class DatabaseConnection {
         }
 
         try {
-            String jdbc = "jdbc:mysql://localhost/mydatabase";
+            String jdbc = "jdbc:mysql://localhost/onlineexamination";
             conn = DriverManager.getConnection(jdbc, "root", "");
         } catch (SQLException ex) {
             System.err.println("Failed to Connect: " + ex.getMessage());
