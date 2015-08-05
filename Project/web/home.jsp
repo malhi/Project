@@ -9,58 +9,48 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home - Online Examination </title>
-        <link href="css/menuStyle.css" rel="stylesheet" type="text/css" />
+        <title>Online Examination </title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-      <%   
-HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null)
-       {
-   response.sendRedirect("index.html");
-      
-
-}
-else
-       {
-    %>
-    <h2 class="Page-Heading">Online Examination</h2>  
-    <%
-    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
-%>
-<div id="navigation">
-			<ul>
-            	<li id="active"><a href="home.jsp">Home</a></li>
-                <%
-                if(Usersession.getAttribute("Privilage").toString().contains("adminUser"))
-         {
-     out.println("<li><a href = 'AdminConsoleHome.jsp'>Administration Console</a></li>");
- }
-                %>
-                <li><a href="main.jsp">Available Exams</a></li>
-                <li><a href="PreviousResults.jsp">Previous Results</a></li>
-                <li><a href="ContactUs.jsp">Contact Us</a></li>
-                <li><a href="Logout.jsp">Logout</a></li>
-		</ul>
-	</div>    
-
-                <table border="0" width="950">
-                    <tr>
-                        <td>
-                            
-              
- <h4 style="color: #4778e3"><font size="5"><b> Assessments</b></font></h4>
+        <div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html">Online Examination</a>
+			</div>
+			<ul id="navigation">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="login.jsp">Login</a>
+				</li>
+				<li>
+					<a href="register.jsp">Register</a>
+				</li>
+				<li class="active">
+					<a href="home.jsp">Examination Assessment</a>
+				</li>
+				<li>
+					<a href="ContactUs.jsp">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="adbox">
+		<div class="clearfix">
+			<img src="Images/box.jpg" alt="Img" height="342" width="368">
+			<div><h4 style="color: #4778e3"><font size="5"><b> Assessments</b></font></h4>
 
 <p>On the online examination portal, we provide students and teachers with a collaborative environment to 
    conduct knowledge assessment tests that are quality assured by a dedicated moderating committee. The 
-   environment also provides provisions for creating custom examinations by authorized users.</p>
-  
-                        </td>
-                    </tr>
-                </table>
-                  <%
-   }
-%>      
-    </body>
-</html>
-
+   environment also provides provisions for creating custom examinations by authorized users.</p>                                    
+			</div>
+		</div>
+	</div>
+	<div id="footer" align="center">
+            <h4>© 2015 All Rights Reserved</h4>
+		</div>
+</body>
+</html>      
+ 

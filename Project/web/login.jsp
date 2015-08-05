@@ -20,17 +20,20 @@
 				<a href="index.html">Online Examination</a>
 			</div>
 			<ul id="navigation">
-				<li>
+			       <li>
 					<a href="index.html">Home</a>
 				</li>
 				<li class="active">
-					<a href="main.jsp">Available Examination</a>
+					<a href="login.jsp">Login</a>
 				</li>
 				<li>
-					<a href="PreviousResultsr.jsp">Previous Results</a>
+					<a href="register.jsp">Register</a>
+				</li>
+                                <li>
+					<a href="home.jsp">Examination Assessment</a>
 				</li>
 				<li>
-					<a href="Logout.jsp">LogOut</a>
+					<a href="ContactUs.jsp">Contact Us</a>
 				</li>
 			</ul>
 		</div>

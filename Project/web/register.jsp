@@ -30,10 +30,10 @@
 					<a href="register.jsp">Register</a>
 				</li>
 				<li>
-					<a href="Examination.jsp">Examination</a>
+					<a href="home.jsp">Examination Assessment</a>
 				</li>
 				<li>
-					<a href="result.jsp">Contact Us</a>
+					<a href="ContactUs.jsp">Contact Us</a>
 				</li>
 			</ul>
 		</div>
@@ -55,7 +55,7 @@
                 <input type="email" name="email" style="margin-left: 70px"><br><br/>  
                      
                 <input type="submit" value="Submit" id="submit">        
-                </form><br/><br/><br/> </cenetr>
+                </form><br/><br/><br/>
             </div>  
         <br>
 	<div id="footer" align="center">
