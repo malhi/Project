@@ -25,7 +25,7 @@ if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Pri
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
     out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
 %>
@@ -54,28 +54,28 @@ else
         <tr>
             <td> 
                 <a href="AddNewExam.jsp">
-                    <img src="images/Add-Exam.png" width="160" height="42" style="margin-top:5px; margin-bottom: 5px" />
+                    <img src="Images/Add-Exam.png" width="160" height="42" style="margin-top:5px; margin-bottom: 5px" />
                 </a>
             </td>
         </tr>
         <tr>
             <td>
                 <a href="AdminRemoveExam.jsp">
-                    <img src="images/Remove-Exam.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
+                    <img src="Images/Remove-Exam.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
                 </a>
             </td>
         </tr>
         <tr>
             <td>
                 <a href="AdminRemoveUser.jsp">
-                    <img src="images/Remove-User.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
+                    <img src="Images/Remove-User.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
                 </a>
             </td>
         </tr>
         <tr>
             <td>
                 <a href="AdminChangeUserPrivileges.jsp">
-                    <img src="images/User-Privilages.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
+                    <img src="Images/User-Privilages.png" width="160" height="42" style="margin-top:5px;  margin-bottom: 5px" />
                 </a>
             </td>
         </tr>
