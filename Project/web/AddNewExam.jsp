@@ -18,7 +18,7 @@
                      
 <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null)
+if(Usersession.getAttribute("username") == null)
        {
    response.sendRedirect("index.html");
       
