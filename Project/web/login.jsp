@@ -24,16 +24,13 @@
 					<a href="index.html">Home</a>
 				</li>
 				<li class="active">
-					<a href="login.jsp">Examination</a>
+					<a href="main.jsp">Available Examination</a>
 				</li>
 				<li>
-					<a href="register.jsp">Previous Results</a>
+					<a href="PreviousResultsr.jsp">Previous Results</a>
 				</li>
 				<li>
-					<a href="exam.jsp">Examination Results</a>
-				</li>
-				<li>
-					<a href="result.jsp">LogOut</a>
+					<a href="Logout.jsp">LogOut</a>
 				</li>
 			</ul>
 		</div>
