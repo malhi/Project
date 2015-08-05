@@ -4,19 +4,23 @@
     Author     : c0653616
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Online Examination</title>
-    <link href="menuStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css.menuStyle.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
               
 <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
+if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
        {
    response.sendRedirect("index.html");
       
@@ -25,9 +29,9 @@ if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Pri
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>
@@ -63,10 +67,10 @@ else
            <%
            
            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-             Connection con=DriverManager.getConnection("jdbc:odbc:Online_Exam_Portal","","");
+             Connection con=DriverManager.getConnection("jdbc:odbc:onlineexamination","","");
              Statement ps=con.createStatement();
 
-             ResultSet rs=ps.executeQuery("Select * from Exam_List"); 
+             ResultSet rs=ps.executeQuery("Select * from exam_list"); 
              int ExamId;
 
 
@@ -99,14 +103,14 @@ else
 <br>
 <!--<i id="err"></i> -->
 <a href="javascript:void(0)" onclick="javascript:document.getElementById('RemoveExamForm').submit()">
-    <img src="images/Remove-Exam.png" style="margin-top:5px;margin-bottom: 5px"/></a>
+    <img src="Images/Remove-Exam.png" style="margin-top:5px;margin-bottom: 5px"/></a>
 
     
    <!--  <a href="javascript:removeUser()">
          <img src="images/Remove.PNG" width="100" height="40" style="margin-top:5px;margin-bottom: 5px"/>
          </a>-->
           <a href="AdminConsoleHome.jsp">
-         <img src="images/Cancel-Exam-Registration-btn.png" style="margin-top:5px;margin-bottom: 5px"/></a>
+         <img src="Images/Cancel-Exam-Registration-btn.png" style="margin-top:5px;margin-bottom: 5px"/></a>
                
         </form>
 

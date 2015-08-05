@@ -4,6 +4,10 @@
     Author     : c0653616
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,7 +38,7 @@
               
 <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
+if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
        {
    response.sendRedirect("index.html");
       
@@ -43,9 +47,9 @@ if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Pri
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>
@@ -77,10 +81,10 @@ else
            <%
            
            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-             Connection con=DriverManager.getConnection("jdbc:odbc:Online_Exam_Portal","","");
+             Connection con=DriverManager.getConnection("jdbc:odbc:onlineexamination","","");
              Statement ps=con.createStatement();
 
-             ResultSet rs=ps.executeQuery("Select UserId,Name,Email from User_Information"); %>
+             ResultSet rs=ps.executeQuery("Select uid,username,emailid from users"); %>
 
 
        <%     while(rs.next())
@@ -89,14 +93,14 @@ else
      
 
                   <tr colspan ="8"> <td>
-                          <input type="radio" id="User" name="r1" value="<% out.print(rs.getString("UserId")); %>">
+                          <input type="radio" id="User" name="r1" value="<% out.print(rs.getString("uid")); %>">
 
  </td>
                           
 
 
-                        <td><b><% out.println(rs.getString("Name")); %></b><br>
-                      <td><b><% out.println(rs.getString("Email")); %></b><br>
+                        <td><b><% out.println(rs.getString("username")); %></b><br>
+                      <td><b><% out.println(rs.getString("emailid")); %></b><br>
                        </td>
                        </tr>
                      

@@ -47,7 +47,7 @@ else
         Connection con = DriverManager.getConnection (dbUrl,"","");
         Statement stmt = con.createStatement();
         
-        query="select QuestionNo, Question, Answer, OptionA, OptionB, OptionC, OptionD from Exam_Question_Bank where ExamId="
+        query="select QuestionNo, Question, Answer, OptionA, OptionB, OptionC, OptionD from exam_question_bank where ExamId="
                 +UserSession.getAttribute("ExamID");
         ResultSet rs = stmt.executeQuery(query);
         

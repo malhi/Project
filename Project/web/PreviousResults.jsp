@@ -4,6 +4,9 @@
     Author     : c0653616
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +19,7 @@
     <body>
       <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Privilage") == null)
+if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null)
        {
    response.sendRedirect("index.html");
       
@@ -25,9 +28,9 @@ if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Pri
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>
@@ -52,12 +55,12 @@ else
                                 <%
            
            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-             Connection con=DriverManager.getConnection("jdbc:odbc:Online_Exam_Portal","","");
+             Connection con=DriverManager.getConnection("jdbc:odbc:onlineexamination","","");
              Statement ps=con.createStatement();
 
              ResultSet rs;
              
-                     rs=ps.executeQuery("Select * from Exam_Results where UserId = "+Usersession.getAttribute("UserId")); 
+                     rs=ps.executeQuery("Select * from exam_results where uid = "+Usersession.getAttribute("uid")); 
                      rs.setFetchDirection(ResultSet.FETCH_UNKNOWN);
              int ExamId;
 if(rs.next())

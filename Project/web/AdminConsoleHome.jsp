@@ -16,7 +16,7 @@
               
 <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
+if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null || !(Usersession.getAttribute("Privilage").toString().contains("adminUser")))
        {
    response.sendRedirect("index.html");
       
@@ -27,7 +27,7 @@ else
     %>
     <h2 class="Page-Heading">Online Examination</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>

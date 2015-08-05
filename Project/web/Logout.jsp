@@ -14,9 +14,8 @@
     </head>
     <body>
          <%
-            session.setAttribute("Username", null);
-            session.setAttribute("Privilage", null);
-            session.setAttribute("UserId", null);
+            session.setAttribute("username", null);
+            session.setAttribute("uid", null);
             session.invalidate();
             %>
         <h2>You have been logged out successfully</h2>

@@ -61,7 +61,7 @@ else
 <table border="0" cellpadding="10" cellspacing="0" style="width: 950px">
     <tr>
         <td>
-            Question <% out.print(Usersession.getAttribute("RegisterQNo")); %> of 25
+            Question <% out.print(Usersession.getAttribute("uid")); %> of 25
         </td>
         <td style="color: red;" align="center">
             <% if(Usersession.getAttribute("QuestionEntryException")!= null)

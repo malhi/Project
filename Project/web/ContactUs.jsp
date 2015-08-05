@@ -15,7 +15,7 @@
     <body>
       <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Privilage") == null)
+if(Usersession.getAttribute("username") == null || Usersession.getAttribute("Privilage") == null)
        {
    response.sendRedirect("index.html");
       
@@ -26,7 +26,7 @@ else
     %>
     <h2 class="Page-Heading">Online Examination Portal</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>
@@ -52,7 +52,7 @@ else
 				<h2 class="Page-Heading" style="font-size: 34px;padding-bottom: 15px">Contact Us</h2>
                                 Feel free to reach out us at any time to clear your queries at...<br/><br/>
                      
-                     <b> Our Email : </b>helpme@gmail.com<br>
+                     <b> Our Email : </b>khushi_malhi@gmail.com<br>
                      <b> Phone : </b>519-440-8765
 
 				  <br />

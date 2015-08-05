@@ -14,12 +14,12 @@
             function printCertificate()
             {
                 alert("Please note that certificate my not be properly rendered on Chrome Browser. Sorry for the inconvenience.");
-                window.open('/Online_Examination_Portal/CreateDownloadableTestReport', 'Certificate', '');
+                window.open('/onlineexamination/CreateDownloadableTestReport', 'Certificate', '');
             }
         </script>
         <%
         HttpSession UserSession = request.getSession(false);
-        if(UserSession.getAttribute("Username") == null)
+        if(UserSession.getAttribute("username") == null)
        {
    response.sendRedirect("index.html");
       
@@ -29,11 +29,11 @@ else
     
        {
         %>
-        <title><% out.print(UserSession.getAttribute("ExamName")+" : "+UserSession.getAttribute("UEID")); %> - Online Examination Portal</title>
+        <title><% out.print(UserSession.getAttribute("ExamName")+" : "+UserSession.getAttribute("UEID")); %> - Online Examination</title>
     </head>
     <body>
     <center>
-        <h3>ONLINE EXAMINATION PORTAL</h3>
+        <h3>ONLINE EXAMINATION</h3>
         <h2><% out.println(UserSession.getAttribute("ExamName")); %></h2>
         <table border ="0" cellspacing ="0" cellpadding="10">
             <tr>
@@ -66,7 +66,7 @@ else
                     :
                 </td>
                 <td>
-                    <% out.println(UserSession.getAttribute("UserId")); %>
+                    <% out.println(UserSession.getAttribute("uid")); %>
                 </td>
             </tr>
             <tr>

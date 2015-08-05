@@ -15,7 +15,7 @@
     <%@page import="java.util.Date"%>
 <%
 HttpSession UserSession = request.getSession(false);
-if(UserSession.getAttribute("Username") == null)
+if(UserSession.getAttribute("username") == null)
        {
    response.sendRedirect("index.html");
       
@@ -79,9 +79,7 @@ secs = 59;
 if( secs < 10 ) secs = "0" + secs;             
 if( mins < 10 ) mins = "0" + parseInt( mins, 10 );
 
-// display
-//document.forma.mins.value = mins; 
-//document.forma.secs.value = secs;
+
 document.getElementById("ShowTimer").innerHTML= mins+" : "+secs;
 
 if(mins < 20)
@@ -187,7 +185,7 @@ for (i=0;i<ARRcookies.length;i++)
                         :
                     </td>
                     <td style="padding-left: 10px">
-                        <% out.println(UserSession.getAttribute("UserId")); %>
+                        <% out.println(UserSession.getAttribute("uid")); %>
                     </td>
                     
                     
@@ -217,7 +215,7 @@ for (i=0;i<ARRcookies.length;i++)
             <table border="0" width="800"  cellspacing="0" cellpadding="2">
                 <tr align="center">
                     <td valign="center">
-                        <b>Online Examination Portal</b>
+                        <b>Online Examination</b>
                     </td>
                 </tr>
                 <tr align="center">

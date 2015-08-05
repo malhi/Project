@@ -9,14 +9,14 @@
 String name = request.getParameter("name").toString();
 System.out.println(name);
 String data ="";
-String dbUrl = "jdbc:odbc:Online_Exam_Portal";
+String dbUrl = "jdbc:odbc:onlineexamination";
 //String dbClass = "com.mysql.jdbc.Driver";
 try{
            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
                
         Connection con = DriverManager.getConnection (dbUrl,"","");
         Statement stmt = con.createStatement();
-           ResultSet rs=stmt.executeQuery("select * from Login_Credentials where username='"+name+"'");
+           ResultSet rs=stmt.executeQuery("select * from users where username='"+name+"'");
 int count=0;
           while(rs.next())
           {

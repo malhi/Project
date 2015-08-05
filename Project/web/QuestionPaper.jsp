@@ -103,15 +103,7 @@ for (i=0;i<ARRcookies.length;i++)
             />
             <span id="OptionD-Space"><% out.print(UserSession.getAttribute("OptionD")); %></span><br/><br/>
         </form>
-   <!--     <br/><br/><span id="Debug-Space">
-            <% 
-            //out.println(""
-             //       + "Question No. : "+iQuestionNo+""
-              //      + "<br>Value Obtained :  "+UserSession.getAttribute(OptionName)+""
-                //    + "<br>Option Name : "+OptionName); 
-            %>
-        </span><br/><br/>
-            -->
+  
         <%
  }
 catch(Exception err)

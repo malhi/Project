@@ -10,7 +10,7 @@ String name = request.getParameter("name").toString();
 System.out.println(name);
 String data ="";
  boolean isInputNumOnly = false;
-String dbUrl = "jdbc:odbc:Online_Exam_Portal";
+String dbUrl = "jdbc:odbc:onlineexamination";
 //String dbClass = "com.mysql.jdbc.Driver";
 try{
            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
@@ -20,7 +20,7 @@ try{
                              {
         Connection con = DriverManager.getConnection (dbUrl,"","");
         Statement stmt = con.createStatement();
-           ResultSet rs=stmt.executeQuery("select * from Exam_List where ExamId="+name+"");
+           ResultSet rs=stmt.executeQuery("select * from exam_list where ExamId="+name+"");
 int count=0;
           while(rs.next())
           {
