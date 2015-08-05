@@ -15,7 +15,7 @@
     <body>
        <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null)
+if(Usersession.getAttribute("username") == null)
        {
    response.sendRedirect("index.html");
       
@@ -34,7 +34,7 @@ else
     %>
     <h2 class="Page-Heading">Online Examination</h2>  
     <%
-    out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+    out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
 %>
 <div id="navigation">
 			<ul>
