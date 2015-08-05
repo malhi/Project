@@ -35,7 +35,7 @@ else if(!(Usersession.getAttribute("Privilage").toString().contains("adminUser")
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
     out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
 %>
@@ -97,9 +97,9 @@ else
             if(Usersession.getAttribute("ExamCreationError")!= null)
             out.print(Usersession.getAttribute("ExamCreationError")); %></b><br/>
             <a href="javascript:void(0)" onclick="javascript:document.getElementById('RegisterNewExamForm').submit()">
-                <img src="images/Register-Exam-btn.png" width="160" height="42" style="margin-top:10px;" /></a>
+                <img src="Images/Register-Exam-btn.png" width="160" height="42" style="margin-top:10px;" /></a>
                     <a href="AdminConsoleHome.jsp">
-                        <img src="images/Cancel-Exam-Registration-btn.png" width="160" height="42" style="margin-top:10px;" /></a>
+                        <img src="Images/Cancel-Exam-Registration-btn.png" width="160" height="42" style="margin-top:10px;" /></a>
          </td>
     </tr> 
     
