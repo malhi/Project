@@ -15,7 +15,7 @@
         
        <%
         HttpSession UserSession = request.getSession(false);
-        if(UserSession.getAttribute("Username") == null || UserSession.getAttribute("Privilage") == null)
+        if(UserSession.getAttribute("username") == null || UserSession.getAttribute("Privilage") == null)
        {
    response.sendRedirect("index.html");
       
@@ -28,11 +28,11 @@ else
         String UserSelection = "";
         String Question = "";
         
-        String dbUrl = "jdbc:odbc:Online_Exam_Portal";
+        String dbUrl = "jdbc:odbc:onlineexamination";
         String dbClass = "com.mysql.jdbc.Driver";
         String query = "";
         %>
-        <title><% out.print(UserSession.getAttribute("ExamName")+" : "+UserSession.getAttribute("UEID")); %> - Online Examination Portal</title>
+        <title><% out.print(UserSession.getAttribute("ExamName")+" : "+UserSession.getAttribute("UEID")); %> - Online Examination</title>
     
     </head>
     <body>
