@@ -30,7 +30,7 @@
 					<a href="register.jsp">Register</a>
 				</li>
 				<li>
-					<a href="E.jsp">Examination</a>
+					<a href="Examination.jsp">Examination</a>
 				</li>
 				<li>
 					<a href="result.jsp">Contact Us</a>
