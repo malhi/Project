@@ -35,36 +35,36 @@ String AlottedTime = "";
  
 StartTime = UserSession.getAttribute("StartTime").toString();
 
-//AlottedTime = request.getParameter("Alotted");
-//if(AlottedTime == null) 
 AlottedTime = UserSession.getAttribute("Alotted").toString();
 
 int iAlottedTime = Integer.parseInt(AlottedTime);
-//out.println("Alotted time : "+iAlottedTime);
+
 
 Date timer = new Date();
 
-long currentTime= timer.getTime()/1000; //-- Current time in seconds
-//out.println("<br>Current Time : "+currentTime);
+long currentTime= timer.getTime()/1000; 
+//-- Current time in seconds
 
-int Elapsed = (int) currentTime-Integer.parseInt(StartTime); //-- Elapsed duration of the exam in seconds
-//out.println("<br>Elapsed : "+Elapsed);
 
-int remaining = iAlottedTime - Elapsed; //-- Remaining duration of the exam in seconds
-//out.println("<br>Remaining : "+remaining);
+int Elapsed = (int) currentTime-Integer.parseInt(StartTime); 
+//-- Elapsed duration of the exam in seconds
+
+int remaining = iAlottedTime - Elapsed; 
+//-- Remaining duration of the exam in seconds
+
 
 int remainingMin = remaining/60;
-//out.println("<br>Remaining Minutes : "+remainingMin);
+
 
 int remainingSec = remaining%60;
-//out.println("<br>Remaining Seconds : "+remainingSec+"<br><br>");
-
 
 %>
 <script>
 <!--
-var mins = <%=remainingMin%>; // write mins to javascript
-var secs = <%=remainingSec%>; // write secs to javascript
+var mins = <%=remainingMin%>; 
+// write mins to javascript
+var secs = <%=remainingSec%>; 
+//// write secs to javascript
 
 function timer()
 {
@@ -83,9 +83,7 @@ if( mins < 10 ) mins = "0" + parseInt( mins, 10 );
 //document.forma.mins.value = mins; 
 //document.forma.secs.value = secs;
 document.getElementById("ShowTimer").innerHTML= mins+" : "+secs;
-//document.forma.minutes.innerHtml = mins;
-// 
-// continue?
+
 if(mins < 20)
     {
          document.getElementById("ShowTimer").style.color = "#FF9933";  
@@ -100,7 +98,7 @@ if( secs == 0 && mins == 0 ) // time over
     document.getElementById("timeoutExamPost").submit();
 //---- TO-DO Code : Time out operations should be written here
 }
-else // call timer() recursively every 1000 ms == 1 sec
+else 
 {
 window.setTimeout( "timer()", 1000 );
 }
@@ -115,8 +113,7 @@ function getPreviousQuestion()
            {
         setCookie("QuestionNo",QNo,1);
         setCookie("MoveDirection","Back",1);
-    //document.getElementById("testID").innerHTML = QNo;
-    //myframe.contentDocument.getElementById("Debug-Space").innerHTML = QNo;
+ 
     myframe.contentDocument.getElementById("QuestionPaperForm").submit();
            }
 }
@@ -131,8 +128,7 @@ function getNextQuestion()
          {   
         setCookie("QuestionNo",QNo,1);
         setCookie("MoveDirection","Next",1);
-    //document.getElementById("testID").innerHTML = QNo;
-    //myframe.contentDocument.getElementById("Debug-Space").innerHTML = QNo;
+  
     myframe.contentDocument.getElementById("QuestionPaperForm").submit();
          }
 }
