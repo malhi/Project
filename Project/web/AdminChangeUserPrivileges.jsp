@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> Online Examination</title>
+        <title>Online Examination</title>
     <link href="css/menuStyle.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -25,7 +25,7 @@ if(Usersession.getAttribute("Username") == null || Usersession.getAttribute("Pri
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
     out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
 %>
