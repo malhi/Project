@@ -52,9 +52,7 @@
                 <label for="cpassword">Confirm Password:</label>
                 <input type="password" name="cpassword" ><br><br/>
                 <label for="email">Email Id:</label>     
-                <input type="email" name="email" style="margin-left: 70px"><br><br/>
-                <label for="phone">Phone :</label>
-                 <input type="tel" name="phone" style="margin-left: 80px"><br><br/>    
+                <input type="email" name="email" style="margin-left: 70px"><br><br/>  
                      
                 <input type="submit" value="Submit" id="submit">        
                 </form><br/><br/><br/> </cenetr>
