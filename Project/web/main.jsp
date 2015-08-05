@@ -23,7 +23,7 @@
         
 <%   
 HttpSession Usersession = request.getSession(false);
-if(Usersession.getAttribute("Username") == null)
+if(Usersession.getAttribute("username") == null)
        {
    response.sendRedirect("index.html");
       
@@ -35,7 +35,7 @@ else
 %>
 <h2 class="Page-Heading">Online Examination</h2>  
 <%
- out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
+ out.println("<b>Welcome "+Usersession.getAttribute("username")+"...</b>");
  
  %>
   <div id="navigation">  
@@ -68,7 +68,7 @@ Select one and click on View Details to begin the test.<br><br>
 try
 {
  Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
- Connection con=DriverManager.getConnection("jdbc:odbc:Online_Exam_Portal","","");
+ Connection con=DriverManager.getConnection("jdbc:odbc:onlineexamination","","");
  Statement ps=con.createStatement();
 
              ResultSet rs=ps.executeQuery("Select * from Exam_List");
