@@ -128,7 +128,7 @@ public class ProcessQuestion extends HttpServlet {
                 txtOptionC = convertTextareaContent(txtOptionC);
                 txtOptionD = convertTextareaContent(txtOptionD);
                 
-                QuestionNo = Integer.parseInt(UserSession.getAttribute("RegisterQNo").toString());
+                QuestionNo = Integer.parseInt(UserSession.getAttribute("uid").toString());
                 out.print(QuestionNo);
                 
                 Connection con = DriverManager.getConnection (dbUrl,"","");

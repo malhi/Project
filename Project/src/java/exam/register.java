@@ -104,7 +104,7 @@ public class register extends HttpServlet {
                 stmt.setString(5, c.getEmailId());
                 stmt.executeUpdate();
                 response.sendRedirect("login.jsp");
-                out.println("You have been successfully signed up");
+                out.println("You have been Successfully Signed Up!!");
                 
                 } else {
                 out.println("Error in database connection");
@@ -119,7 +119,7 @@ public class register extends HttpServlet {
         }
         else {
         
-            out.println("Please enter the values before submit");
+            out.println("Please enter the values before Submit");
         }
         
         

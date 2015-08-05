@@ -104,8 +104,6 @@ public class RunExam extends HttpServlet {
             UserSession.setAttribute("OptionD", rs.getString("OptionD"));
         }
         
-        //out.println(""+rs.getString("Question"));
-        
             
             response.sendRedirect("QuestionPaper.jsp");
         } 
