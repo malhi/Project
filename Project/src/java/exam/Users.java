@@ -11,7 +11,7 @@ package exam;
  * @author c0653616
  */
 public class Users {
- int userid;
+ int uid;
     String firstname;
     String lastname;
     String username;
@@ -33,11 +33,11 @@ public class Users {
     
     
     public int getUserId() {
-        return userid;
+        return uid;
     }
 
-    public void setUserId(int userid) {
-        this.userid = userid;
+    public void setUserId(int uid) {
+        this.uid = uid;
     }
 
     public String getFirstName() {

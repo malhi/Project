@@ -44,7 +44,7 @@
                         <p>
           <center><h2>User Login</h2> </center>
                <center>    <table  cellpadding="3" width="40%">
-            <form name="f1" method="post" action="loginServlet">
+            <form name="f1" method="post" action="login">
                     <tr>
                     <td>
                         <font size="4" color="black">
