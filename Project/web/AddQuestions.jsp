@@ -32,7 +32,7 @@ else if(!(Usersession.getAttribute("Privilage").toString().contains("adminUser")
 else
        {
     %>
-    <h2 class="Page-Heading">Online Examination Portal</h2>  
+    <h2 class="Page-Heading">Online Examination</h2>  
     <%
     out.println("<b>Welcome "+Usersession.getAttribute("Username")+"...</b>");
 %>
