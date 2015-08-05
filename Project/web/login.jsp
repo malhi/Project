@@ -51,7 +51,7 @@
                         Username
                         </font>
                     </td>
-                    <td><input type="text" name="uname"/></td>
+                    <td><input type="text" name="uname" style="margin-left: 50px"/></td>
                 </tr><br>
             <tr>
                 <td>
@@ -59,7 +59,7 @@
                     Password
                     </font>
                 </td>
-                <td><input type="password" name="upass"/></td>
+                <td><input type="password" name="upass" style="margin-left: 50px"/></td>
             </tr><br>
                 <tr>
                     <td style="text-align:center;" colspan="2">
